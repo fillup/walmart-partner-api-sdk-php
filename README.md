@@ -43,10 +43,16 @@ Currently 100% (19 of 19) are supported by this SDK
 
 
 ## todo
- - [ ] Complete API coverage
- - [ ] Perform integration testing for all APIs
- - [ ] Write more documentation and examples for usage
+ - [ ] Perform integration testing for remaining Order APIs
  - [ ] Write middleware for error response handling to parse message from response xml
+ 
+## Reporting Issues
+Please use Github Issues to report any problems you find or questions 
+about usage.
+
+## Contributing
+Pull requests are welcome for improvements to the core library, tests, 
+and documentation.
  
 #  No Warranty
 
