@@ -1,6 +1,9 @@
 # Walmart Partner APIs PHP SDK
 This library provides an easy to use interface to [Walmart's Partner APIs](https://developer.walmartapis.com/). 
 
+[![Build Status](https://travis-ci.org/fillup/walmart-partner-api-sdk-php.svg?branch=master)](https://travis-ci.org/fillup/walmart-partner-api-sdk-php)
+[![Coverage Status](https://coveralls.io/repos/github/fillup/walmart-partner-api-sdk-php/badge.svg?branch=master)](https://coveralls.io/github/fillup/walmart-partner-api-sdk-php?branch=master)
+
 ## Installation
 It is easiest to use [Composer](https://getcomposer.org/) to install, simply run:
 
