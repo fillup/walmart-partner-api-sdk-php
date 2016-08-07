@@ -21,6 +21,7 @@
                     'required' => false,
                     'type' => 'integer',
                     'location' => 'query',
+                    'maximum' => 20,
                 ],
                 'offset' => [
                     'required' => false,

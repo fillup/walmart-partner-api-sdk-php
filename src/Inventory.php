@@ -40,7 +40,7 @@ class Inventory extends BaseClient
     {
 
         if ( ! is_array($inventory)) {
-            throw new \Exception('Inventory must be an array');
+            throw new \Exception('Inventory must be an array', 1470529303);
         }
 
         $schema = [
@@ -55,6 +55,10 @@ class Inventory extends BaseClient
 
         $a2x = new A2X($inventory, $schema);
         $xml = $a2x->asXml();
+
+        if ( ! isset($inventory['inventory']['sku'])) {
+            throw new \Exception("The element ['inventory']['sku'] must be set", 1470529425);
+        }
 
         return $this->updateInventory([
             'sku' => $inventory['inventory']['sku'],

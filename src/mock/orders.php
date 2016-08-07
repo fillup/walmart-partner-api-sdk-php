@@ -358,82 +358,82 @@ return [
         'status' => 200,
         'headers' => [],
         'body' => '<?xml version="1.0" encoding="UTF-8"?>
-<ns2:order xmlns:ns2="http://walmart.com/mp/orders" xmlns:ns3="http://walmart.com/">
-   <ns2:purchaseOrderId>2575693098967</ns2:purchaseOrderId>
-   <ns2:customerOrderId>5591500903533</ns2:customerOrderId>
-   <ns2:customerEmailId>walsim-dev+-xvo_8j5fyi@cognitect.com</ns2:customerEmailId>
-   <ns2:orderDate>2015-10-15T21:32:55.000Z</ns2:orderDate>
-   <ns2:shippingInfo>
-      <ns2:phone>(919) 555-1212</ns2:phone>
-      <ns2:estimatedDeliveryDate>2015-10-16T06:59:59.000Z</ns2:estimatedDeliveryDate>
-      <ns2:methodCode>Standard</ns2:methodCode>
-      <ns2:postalAddress>
-         <ns2:name>SimTest_Accept PGOMS</ns2:name>
-         <ns2:address1>303 S Roxboro St.</ns2:address1>
-         <ns2:address2>Suite 10</ns2:address2>
-         <ns2:city>Durham</ns2:city>
-         <ns2:state>NC</ns2:state>
-         <ns2:postalCode>27701</ns2:postalCode>
-         <ns2:country>USA</ns2:country>
-         <ns2:addressType>OFFICE</ns2:addressType>
-      </ns2:postalAddress>
-   </ns2:shippingInfo>
-   <ns2:orderLines>
-      <ns2:orderLine>
-         <ns2:lineNumber>1</ns2:lineNumber>
-         <ns2:item>
-            <ns2:productName>The Bowflex Classic C10 Heart Rate Monitor Watch</ns2:productName>
-            <ns2:sku>BOW1020_6096338</ns2:sku>
-         </ns2:item>
-         <ns2:charges>
-            <ns2:charge>
-               <ns2:chargeType>PRODUCT</ns2:chargeType>
-               <ns2:chargeName>ItemPrice</ns2:chargeName>
-               <ns2:chargeAmount>
-                  <ns2:currency>USD</ns2:currency>
-                  <ns2:amount>45.00</ns2:amount>
-               </ns2:chargeAmount>
-               <ns2:tax>
-                  <ns2:taxName>ItemPrice</ns2:taxName>
-                  <ns2:taxAmount>
-                     <ns2:currency>USD</ns2:currency>
-                     <ns2:amount>3.38</ns2:amount>
-                  </ns2:taxAmount>
-               </ns2:tax>
-            </ns2:charge>
-            <ns2:charge>
-               <ns2:chargeType>SHIPPING</ns2:chargeType>
-               <ns2:chargeName>Shipping</ns2:chargeName>
-               <ns2:chargeAmount>
-                  <ns2:currency>USD</ns2:currency>
-                  <ns2:amount>4.99</ns2:amount>
-               </ns2:chargeAmount>
-               <ns2:tax>
-                  <ns2:taxName>Shipping</ns2:taxName>
-                  <ns2:taxAmount>
-                     <ns2:currency>USD</ns2:currency>
-                     <ns2:amount>0.37</ns2:amount>
-                  </ns2:taxAmount>
-               </ns2:tax>
-            </ns2:charge>
-         </ns2:charges>
-         <ns2:orderLineQuantity>
-            <ns2:unitOfMeasurement>EACH</ns2:unitOfMeasurement>
-            <ns2:amount>1</ns2:amount>
-         </ns2:orderLineQuantity>
-         <ns2:statusDate>2015-10-16T14:51:02.000Z</ns2:statusDate>
-         <ns2:orderLineStatuses>
-            <ns2:orderLineStatus>
-               <ns2:status>Acknowledged</ns2:status>
-               <ns2:statusQuantity>
-                  <ns2:unitOfMeasurement>EACH</ns2:unitOfMeasurement>
-                  <ns2:amount>1</ns2:amount>
-               </ns2:statusQuantity>
-            </ns2:orderLineStatus>
-         </ns2:orderLineStatuses>
-      </ns2:orderLine>
-   </ns2:orderLines>
-</ns2:order>'
+<ns3:order xmlns:ns3="http://walmart.com/mp/orders" xmlns:ns3="http://walmart.com/">
+   <ns3:purchaseOrderId>2575693098967</ns3:purchaseOrderId>
+   <ns3:customerOrderId>5591500903533</ns3:customerOrderId>
+   <ns3:customerEmailId>walsim-dev+-xvo_8j5fyi@cognitect.com</ns3:customerEmailId>
+   <ns3:orderDate>2015-10-15T21:32:55.000Z</ns3:orderDate>
+   <ns3:shippingInfo>
+      <ns3:phone>(919) 555-1212</ns3:phone>
+      <ns3:estimatedDeliveryDate>2015-10-16T06:59:59.000Z</ns3:estimatedDeliveryDate>
+      <ns3:methodCode>Standard</ns3:methodCode>
+      <ns3:postalAddress>
+         <ns3:name>SimTest_Accept PGOMS</ns3:name>
+         <ns3:address1>303 S Roxboro St.</ns3:address1>
+         <ns3:address2>Suite 10</ns3:address2>
+         <ns3:city>Durham</ns3:city>
+         <ns3:state>NC</ns3:state>
+         <ns3:postalCode>27701</ns3:postalCode>
+         <ns3:country>USA</ns3:country>
+         <ns3:addressType>OFFICE</ns3:addressType>
+      </ns3:postalAddress>
+   </ns3:shippingInfo>
+   <ns3:orderLines>
+      <ns3:orderLine>
+         <ns3:lineNumber>1</ns3:lineNumber>
+         <ns3:item>
+            <ns3:productName>The Bowflex Classic C10 Heart Rate Monitor Watch</ns3:productName>
+            <ns3:sku>BOW1020_6096338</ns3:sku>
+         </ns3:item>
+         <ns3:charges>
+            <ns3:charge>
+               <ns3:chargeType>PRODUCT</ns3:chargeType>
+               <ns3:chargeName>ItemPrice</ns3:chargeName>
+               <ns3:chargeAmount>
+                  <ns3:currency>USD</ns3:currency>
+                  <ns3:amount>45.00</ns3:amount>
+               </ns3:chargeAmount>
+               <ns3:tax>
+                  <ns3:taxName>ItemPrice</ns3:taxName>
+                  <ns3:taxAmount>
+                     <ns3:currency>USD</ns3:currency>
+                     <ns3:amount>3.38</ns3:amount>
+                  </ns3:taxAmount>
+               </ns3:tax>
+            </ns3:charge>
+            <ns3:charge>
+               <ns3:chargeType>SHIPPING</ns3:chargeType>
+               <ns3:chargeName>Shipping</ns3:chargeName>
+               <ns3:chargeAmount>
+                  <ns3:currency>USD</ns3:currency>
+                  <ns3:amount>4.99</ns3:amount>
+               </ns3:chargeAmount>
+               <ns3:tax>
+                  <ns3:taxName>Shipping</ns3:taxName>
+                  <ns3:taxAmount>
+                     <ns3:currency>USD</ns3:currency>
+                     <ns3:amount>0.37</ns3:amount>
+                  </ns3:taxAmount>
+               </ns3:tax>
+            </ns3:charge>
+         </ns3:charges>
+         <ns3:orderLineQuantity>
+            <ns3:unitOfMeasurement>EACH</ns3:unitOfMeasurement>
+            <ns3:amount>1</ns3:amount>
+         </ns3:orderLineQuantity>
+         <ns3:statusDate>2015-10-16T14:51:02.000Z</ns3:statusDate>
+         <ns3:orderLineStatuses>
+            <ns3:orderLineStatus>
+               <ns3:status>Acknowledged</ns3:status>
+               <ns3:statusQuantity>
+                  <ns3:unitOfMeasurement>EACH</ns3:unitOfMeasurement>
+                  <ns3:amount>1</ns3:amount>
+               </ns3:statusQuantity>
+            </ns3:orderLineStatus>
+         </ns3:orderLineStatuses>
+      </ns3:orderLine>
+   </ns3:orderLines>
+</ns3:order>'
     ],
 
     'POST /v3/orders/2575693098947/cancel' => [
