@@ -145,7 +145,11 @@ class BaseClient extends GuzzleClient
         // Load service description data.
         $data = is_readable($config['description_path'])
             ? include $config['description_path']
-            : null;
+            : [];
+
+        if ( ! is_array($data)) {
+            throw new \Exception('Service description file must return an array', 1470529124);
+        }
 
         // Override description from local config if set
         if(isset($config['description_override'])){
