@@ -57,26 +57,28 @@ $client = new Inventory([
 ]);
 
 $feed = $client->bulk([
-    'InventoryHeader' => [
-        'version' => '1.4',
-    ],
-    'inventory' => [
-        [
-            'sku' => '86678GHGHGKL',
-            'quantity' => [
-                'unit' => 'EACH',
-                'amount' => 5,
-            ],
-            'fulfillmentLagTime' => 3,
+    'InventoryFeed' => [
+        'InventoryHeader' => [
+            'version' => '1.4',
         ],
-        [
-            'sku' => '12345678',
-            'quantity' => [
-                'unit' => 'EACH',
-                'amount' => 9,
+        'inventory' => [
+            [
+                'sku' => '86678GHGHGKL',
+                'quantity' => [
+                    'unit' => 'EACH',
+                    'amount' => 5,
+                ],
+                'fulfillmentLagTime' => 3,
             ],
-            'fulfillmentLagTime' => 1,
-        ]
-    ],
+            [
+                'sku' => '12345678',
+                'quantity' => [
+                    'unit' => 'EACH',
+                    'amount' => 9,
+                ],
+                'fulfillmentLagTime' => 1,
+            ]
+        ],
+    ]
 ]);
 ```
