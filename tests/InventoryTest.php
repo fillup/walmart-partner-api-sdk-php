@@ -10,10 +10,10 @@ class InventoryTest extends \PHPUnit_Framework_Testcase
 {
 
     public $config = [];
-    //public $proxy = null;
-    public $proxy = 'tcp://localhost:8888';
+    public $proxy = null;
+    //public $proxy = 'tcp://localhost:8888';
     public $verifySsl = false;
-    public $env = Inventory::ENV_STAGE;
+    public $env = Inventory::ENV_MOCK;
     public $debugOutput = false;
 
     public function __construct()

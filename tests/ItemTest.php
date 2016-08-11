@@ -10,10 +10,10 @@ class ItemTest extends \PHPUnit_Framework_Testcase
 {
 
     public $config = [];
-    //public $proxy = null;
-    public $proxy = 'tcp://localhost:8888';
+    public $proxy = null;
+    //public $proxy = 'tcp://localhost:8888';
     public $verifySsl = false;
-    public $env = Item::ENV_STAGE;
+    public $env = Item::ENV_MOCK;
     public $debugOutput = false;
 
     public function __construct()
@@ -97,6 +97,32 @@ class ItemTest extends \PHPUnit_Framework_Testcase
                     'MPItem' => [
                         [
                             'sku' => 'NO11140_7022363',
+                            'Product' => [
+                                'productName' => 'Nourison Oasis Hand-Tufted Rectangle Rug',
+                                'longDescription' => 'From its supremely plush pile to its satiny yarns and sublime patina, this sensational hand-tufted rug is truly an embarrassment of riches. This hibiscus floral print is certain to take center stage.',
+                                'shelfDescription' => 'From its supremely plush pile to its satiny yarns and sublime patina, this sensational hand-tufted rug is truly an embarrassment of riches. This hibiscus floral print is certain to take center stage.',
+                                'shortDescription' => 'From its supremely plush pile to its satiny yarns and sublime patina, this sensational hand-tufted rug is truly an embarrassment of riches.',
+                                'mainImage' => ['mainImageUrl' => 'http://us-i5.tb.wal.co/dfw/dce07b8c-4239/k2-_b1ed5989-151a-4810-944b-35eee2c7b5b0.v1.jpg'],
+                                'productIdentifiers' => [
+                                    [
+                                        'productIdType' => 'UPC',
+                                        'productId' => '06108-OAS02-CHA',
+                                    ],
+                                ],
+                                'productTaxCode' => '203030',
+                                'Home' => ['brand' => 'Nourison'],
+                            ],
+                            'price' => [
+                                'currency' => 'USD',
+                                'amount' => 198.00,
+                            ],
+                            'shippingWeight' => [
+                                'value' => 10,
+                                'unit' => 'LB'
+                            ],
+                        ],
+                        [
+                            'sku' => 'NO1234567',
                             'Product' => [
                                 'productName' => 'Nourison Oasis Hand-Tufted Rectangle Rug',
                                 'longDescription' => 'From its supremely plush pile to its satiny yarns and sublime patina, this sensational hand-tufted rug is truly an embarrassment of riches. This hibiscus floral print is certain to take center stage.',

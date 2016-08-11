@@ -63,30 +63,59 @@ class PriceTest extends \PHPUnit_Framework_Testcase
                         'version' => '1.5',
                     ],
                     'Price' => [
-                        'itemIdentifier' => [
-                            'sku' => '1131270'
+                        [
+                            'itemIdentifier' => [
+                                'sku' => '1131270'
+                            ],
+                            'pricingList' => [
+                                'pricing' => [
+                                    'currentPrice' => [
+                                        'value' => [
+                                            'currency' => 'USD',
+                                            'amount' => '4.00',
+                                        ],
+                                    ],
+                                    'currentPriceType' => 'BASE',
+                                    'comparisonPrice' => [
+                                        'value' => [
+                                            'currency' => 'USD',
+                                            'amount' => '5.99',
+                                        ],
+                                    ],
+                                    'priceDisplayCode' => [
+                                        'submapType' => 'CHECKOUT',
+                                    ],
+                                    'effectiveDate' => '2016-07-02T12:38:43-04:00',
+                                    'expirationDate' => '2016-08-02T12:38:43-04:00',
+                                ]
+                            ],
                         ],
-                        'pricingList' => [
-                            'pricing' => [
-                                'currentPrice' => [
-                                    'value' => [
-                                        'currency' => 'USD',
-                                        'amount' => '4.00',
+                        [
+                            'itemIdentifier' => [
+                                'sku' => '2435543'
+                            ],
+                            'pricingList' => [
+                                'pricing' => [
+                                    'currentPrice' => [
+                                        'value' => [
+                                            'currency' => 'USD',
+                                            'amount' => '4.00',
+                                        ],
                                     ],
-                                ],
-                                'currentPriceType' => 'BASE',
-                                'comparisonPrice' => [
-                                    'value' => [
-                                        'currency' => 'USD',
-                                        'amount' => '5.99',
+                                    'currentPriceType' => 'BASE',
+                                    'comparisonPrice' => [
+                                        'value' => [
+                                            'currency' => 'USD',
+                                            'amount' => '5.99',
+                                        ],
                                     ],
-                                ],
-                                'priceDisplayCode' => [
-                                    'submapType' => 'CHECKOUT',
-                                ],
-                                'effectiveDate' => '2016-07-02T12:38:43-04:00',
-                                'expirationDate' => '2016-08-02T12:38:43-04:00',
-                            ]
+                                    'priceDisplayCode' => [
+                                        'submapType' => 'CHECKOUT',
+                                    ],
+                                    'effectiveDate' => '2016-07-02T12:38:43-04:00',
+                                    'expirationDate' => '2016-08-02T12:38:43-04:00',
+                                ]
+                            ],
                         ],
                     ],
                 ],

@@ -43,22 +43,26 @@ class Price extends BaseClient
         }
 
         $schema = [
-            '/PriceFeed/Price/pricingList/pricing' => [
+            '/PriceFeed/Price' => [
+                'sendItemsAs' => 'Price',
+                'includeWrappingTag' => false,
+            ],
+            '/PriceFeed/Price/Price/pricingList/pricing' => [
                 'attributes' => [
                     'effectiveDate', 'expirationDate',
                 ],
             ],
-            '/PriceFeed/Price/pricingList/pricing/currentPrice/value' => [
+            '/PriceFeed/Price/Price/pricingList/pricing/currentPrice/value' => [
                 'attributes' => [
                     'currency', 'amount',
                 ],
             ],
-            '/PriceFeed/Price/pricingList/pricing/comparisonPrice/value' => [
+            '/PriceFeed/Price/Price/pricingList/pricing/comparisonPrice/value' => [
                 'attributes' => [
                     'currency', 'amount',
                 ],
             ],
-            '/PriceFeed/Price/pricingList/pricing/priceDisplayCode' => [
+            '/PriceFeed/Price/Price/pricingList/pricing/priceDisplayCode' => [
                 'attributes' => [
                     'submapType',
                 ],
