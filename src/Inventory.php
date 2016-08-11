@@ -78,7 +78,12 @@ class Inventory extends BaseClient
             throw new \Exception('Items is not an array', 14663491774);
         }
 
-        $schema = [];
+        $schema = [
+            '/InventoryFeed/inventory' => [
+                'sendItemsAs' => 'inventory',
+                'includeWrappingTag' => false,
+            ],
+        ];
 
         $a2x = new A2X($items, $schema);
         $xml = $a2x->asXml();

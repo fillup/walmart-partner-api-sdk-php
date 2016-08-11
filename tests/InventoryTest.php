@@ -10,10 +10,10 @@ class InventoryTest extends \PHPUnit_Framework_Testcase
 {
 
     public $config = [];
-    public $proxy = null;
-    //public $proxy = 'tcp://localhost:8888';
+    //public $proxy = null;
+    public $proxy = 'tcp://localhost:8888';
     public $verifySsl = false;
-    public $env = Inventory::ENV_MOCK;
+    public $env = Inventory::ENV_STAGE;
     public $debugOutput = false;
 
     public function __construct()
@@ -83,28 +83,29 @@ class InventoryTest extends \PHPUnit_Framework_Testcase
         $client = $this->getClient();
         try {
             $feed = $client->bulk([
-                'InventoryHeader' => [
-                    'version' => '1.4',
-                ],
-                'inventory' => [
-                    [
-                        'sku' => '86678GHGHGKL',
-                        'quantity' => [
-                            'unit' => 'EACH',
-                            'amount' => 5,
-                        ],
-                        'fulfillmentLagTime' => 3,
+                'InventoryFeed' => [
+                    'InventoryHeader' => [
+                        'version' => '1.4',
                     ],
-                    [
-                        'sku' => '12345678',
-                        'quantity' => [
-                            'unit' => 'EACH',
-                            'amount' => 9,
+                    'inventory' => [
+                        [
+                            'sku' => '86678GHGHGKL',
+                            'quantity' => [
+                                'unit' => 'EACH',
+                                'amount' => 5,
+                            ],
+                            'fulfillmentLagTime' => 3,
                         ],
-                        'fulfillmentLagTime' => 1,
-                    ]
-                ],
-
+                        [
+                            'sku' => '12345678',
+                            'quantity' => [
+                                'unit' => 'EACH',
+                                'amount' => 9,
+                            ],
+                            'fulfillmentLagTime' => 1,
+                        ]
+                    ],
+                ]
             ]);
             $this->debug($feed);
 

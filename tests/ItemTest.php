@@ -10,10 +10,10 @@ class ItemTest extends \PHPUnit_Framework_Testcase
 {
 
     public $config = [];
-    public $proxy = null;
-    //public $proxy = 'tcp://localhost:8888';
+    //public $proxy = null;
+    public $proxy = 'tcp://localhost:8888';
     public $verifySsl = false;
-    public $env = Item::ENV_MOCK;
+    public $env = Item::ENV_STAGE;
     public $debugOutput = false;
 
     public function __construct()
