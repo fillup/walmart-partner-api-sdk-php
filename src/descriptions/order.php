@@ -2,7 +2,7 @@
     'baseUrl' => 'https://marketplace.walmartapis.com',
     'apiVersion' => 'v3',
     'operations' => [
-        'ListReleased' => [
+        'PrivateListReleased' => [
             'httpMethod' => 'GET',
             'uri' => '/{ApiVersion}/orders/released',
             'responseModel' => 'Result',
@@ -31,7 +31,7 @@
 
             ]
         ],
-        'List' => [
+        'PrivateList' => [
             'httpMethod' => 'GET',
             'uri' => '/{ApiVersion}/orders{nextCursor}',
             'responseModel' => 'Result',

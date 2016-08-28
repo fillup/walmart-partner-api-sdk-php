@@ -2,14 +2,15 @@
 namespace Walmart;
 
 use fillup\A2X;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Message\ResponseInterface;
 use Walmart\BaseClient;
 use Walmart\Utils;
 
 /**
  * Partial Walmart API client implemented with Guzzle.
  *
- * @method array listReleased(array $config = [])
- * @method array list(array $config = [])
+ * @method  array list(array $config = [])
  * @method array get(array $config = [])
  * @method array acknowledge(array $config = [])
  */
@@ -56,6 +57,90 @@ class Order extends BaseClient
         );
 
     }
+
+    public function __call($name, array $arguments)
+    {
+        /*
+         * Overriding call to list() since I cannot define a method with the same name as a reserved keyword.
+         */
+        if ($name === 'list') {
+            return $this->listAll($arguments[0]);
+        }
+        return parent::__call($name, $arguments);
+    }
+
+    /**
+     * List released orders
+     * @param array $config
+     * @return array
+     * @throws \Exception
+     */
+    public function listReleased(array $config = [])
+    {
+        try {
+            return $this->privateListReleased($config);
+        } catch (\Exception $e) {
+            if ($e instanceof RequestException) {
+                /*
+                 * ListReleased and List return 404 error if no results are found, even for successful API calls,
+                 * So if result status is 404, transform to 200 with empty results.
+                 */
+                /** @var ResponseInterface $response */
+                $response = $e->getResponse();
+                if (strval($response->getStatusCode()) === '404') {
+                    return [
+                        'statusCode' => 200,
+                        'list' => [
+                            'meta' => [
+                                'totalCount' => 0
+                            ]
+                        ],
+                        'elements' => []
+                    ];
+                }
+                throw $e;
+            } else {
+                throw $e;
+            }
+        }
+    }
+
+    /**
+     * List all orders
+     * @param array $config
+     * @return array
+     * @throws \Exception
+     */
+    public function listAll(array $config = [])
+    {
+        try {
+            return $this->privateList($config);
+        } catch (\Exception $e) {
+            if ($e instanceof RequestException) {
+                /*
+                 * ListReleased and List return 404 error if no results are found, even for successful API calls,
+                 * So if result status is 404, transform to 200 with empty results.
+                 */
+                /** @var ResponseInterface $response */
+                $response = $e->getResponse();
+                if (strval($response->getStatusCode()) === '404') {
+                    return [
+                        'statusCode' => 200,
+                        'list' => [
+                            'meta' => [
+                                'totalCount' => 0
+                            ]
+                        ],
+                        'elements' => []
+                    ];
+                }
+                throw $e;
+            } else {
+                throw $e;
+            }
+        }
+    }
+
 
     /**
      * Cancel an order

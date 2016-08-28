@@ -1,5 +1,17 @@
 <?php
 return [
+    'GET /v3/orders/released?limit=5&createdStartDate=2016-10-01' => [
+        'status' => 404,
+        'headers' => [],
+        'body' => '',
+    ],
+
+    'GET /v3/orders?status=Shipped&createdStartDate=2016-10-01&limit=5' => [
+        'status' => 404,
+        'headers' => [],
+        'body' => '',
+    ],
+
     'GET /v3/orders/released?limit=2&createdStartDate=2016-06-01' => [
         'status' => 200,
         'headers' => [],
