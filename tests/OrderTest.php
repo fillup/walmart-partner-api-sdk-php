@@ -284,6 +284,37 @@ class OrderTest extends \PHPUnit_Framework_Testcase
         }
     }
 
+    public function testListReleasedNoOrders()
+    {
+        $client = $this->getClient();
+        try {
+            $response = $client->listReleased([
+                'createdStartDate' => '2016-10-01',
+                'limit' => 5,
+            ]);
+            $this->assertEquals(0, $response['list']['meta']['totalCount']);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function testListNoOrders()
+    {
+        $client = $this->getClient();
+        try {
+            $response = $client->list([
+                'createdStartDate' => '2016-10-01',
+                'limit' => 5,
+                'status' => 'Shipped',
+            ]);
+            $this->assertEquals(0, $response['list']['meta']['totalCount']);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+
+
     private function getClient($extraConfig = [])
     {
         $config = array_merge_recursive($this->config, $extraConfig);
