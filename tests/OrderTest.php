@@ -4,7 +4,6 @@ namespace WalmartTests;
 include __DIR__ . '/../vendor/autoload.php';
 
 use GuzzleHttp\Command\Exception\CommandClientException;
-use GuzzleHttp\Exception\RequestException;
 use Walmart\Order;
 
 class OrderTest extends \PHPUnit_Framework_TestCase

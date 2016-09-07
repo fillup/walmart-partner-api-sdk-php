@@ -4,8 +4,6 @@ namespace Walmart\middleware;
 use GuzzleHttp\Event\BeforeEvent;
 use GuzzleHttp\Event\RequestEvents;
 use GuzzleHttp\Event\SubscriberInterface;
-use GuzzleHttp\Message\Response;
-use GuzzleHttp\Stream\Stream;
 use Walmart\mock\MockResponse;
 
 class MockSubscriber implements SubscriberInterface
