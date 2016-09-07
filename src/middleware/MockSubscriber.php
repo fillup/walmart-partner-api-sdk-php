@@ -7,7 +7,6 @@ use GuzzleHttp\Event\SubscriberInterface;
 use GuzzleHttp\Message\Response;
 use GuzzleHttp\Stream\Stream;
 use Walmart\mock\MockResponse;
-use Walmart\Utils;
 
 class MockSubscriber implements SubscriberInterface
 {

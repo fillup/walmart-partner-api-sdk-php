@@ -4,8 +4,6 @@ namespace Walmart;
 use fillup\A2X;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Message\ResponseInterface;
-use Walmart\BaseClient;
-use Walmart\Utils;
 
 /**
  * Partial Walmart API client implemented with Guzzle.

@@ -3,7 +3,6 @@ namespace Walmart;
 
 use fillup\A2X;
 use GuzzleHttp\Post\PostFile;
-use Walmart\BaseClient;
 
 /**
  * Partial Walmart API client implemented with Guzzle.

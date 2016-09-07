@@ -1,8 +1,6 @@
 <?php
 namespace Walmart;
 
-use Walmart\BaseClient;
-
 /**
  * Partial Walmart API client implemented with Guzzle.
  *
