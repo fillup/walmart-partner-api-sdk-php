@@ -3,7 +3,7 @@ namespace WalmartTests\mock;
 
 use Walmart\mock\MockResponse;
 
-class MockResponseTest extends \PHPUnit_Framework_Testcase
+class MockResponseTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetResourceType()
     {

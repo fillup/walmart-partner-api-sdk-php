@@ -7,7 +7,7 @@ use GuzzleHttp\Command\Exception\CommandClientException;
 use GuzzleHttp\Exception\RequestException;
 use Walmart\Order;
 
-class OrderTest extends \PHPUnit_Framework_Testcase
+class OrderTest extends \PHPUnit_Framework_TestCase
 {
 
     public $config = [];
