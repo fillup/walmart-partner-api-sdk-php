@@ -17,7 +17,7 @@ class XmlNamespaceSubscriber implements SubscriberInterface
         ];
     }
 
-    public function stripXmlNamespaces(CompleteEvent $event, $name)
+    public function stripXmlNamespaces(CompleteEvent $event)
     {
         /**
          * Parsing XML with namespaces doesn't seem to work for Guzzle,

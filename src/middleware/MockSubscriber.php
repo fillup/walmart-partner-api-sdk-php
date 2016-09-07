@@ -16,7 +16,7 @@ class MockSubscriber implements SubscriberInterface
         ];
     }
 
-    public function interceptResponse(BeforeEvent $event, $name)
+    public function interceptResponse(BeforeEvent $event)
     {
         $response = MockResponse::getResponse($event->getRequest());
         $event->intercept($response);
