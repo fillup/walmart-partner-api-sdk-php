@@ -18,7 +18,7 @@ class AuthSubscriber implements SubscriberInterface
         ];
     }
 
-    public function addAuthHeaders(BeforeEvent $event, $name)
+    public function addAuthHeaders(BeforeEvent $event)
     {
         /*
          * Get Consumer ID and Private Key from auth and then unset it

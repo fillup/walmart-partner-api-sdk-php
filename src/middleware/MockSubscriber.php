@@ -4,10 +4,7 @@ namespace Walmart\middleware;
 use GuzzleHttp\Event\BeforeEvent;
 use GuzzleHttp\Event\RequestEvents;
 use GuzzleHttp\Event\SubscriberInterface;
-use GuzzleHttp\Message\Response;
-use GuzzleHttp\Stream\Stream;
 use Walmart\mock\MockResponse;
-use Walmart\Utils;
 
 class MockSubscriber implements SubscriberInterface
 {
@@ -19,7 +16,7 @@ class MockSubscriber implements SubscriberInterface
         ];
     }
 
-    public function interceptResponse(BeforeEvent $event, $name)
+    public function interceptResponse(BeforeEvent $event)
     {
         $response = MockResponse::getResponse($event->getRequest());
         $event->intercept($response);

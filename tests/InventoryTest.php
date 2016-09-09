@@ -6,7 +6,7 @@ include __DIR__ . '/../vendor/autoload.php';
 use GuzzleHttp\Command\Exception\CommandClientException;
 use Walmart\Inventory;
 
-class InventoryTest extends \PHPUnit_Framework_Testcase
+class InventoryTest extends \PHPUnit_Framework_TestCase
 {
 
     public $config = [];

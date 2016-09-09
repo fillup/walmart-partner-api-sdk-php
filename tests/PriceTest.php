@@ -6,7 +6,7 @@ include __DIR__ . '/../vendor/autoload.php';
 use GuzzleHttp\Command\Exception\CommandClientException;
 use Walmart\Price;
 
-class PriceTest extends \PHPUnit_Framework_Testcase
+class PriceTest extends \PHPUnit_Framework_TestCase
 {
 
     public $config = [];
