@@ -41,7 +41,7 @@ class AuthSubscriber implements SubscriberInterface
         $event->getRequest()->setUrl($requestUrl);
         
         $requestMethod = $event->getRequest()->getMethod();
-        $timestamp = Utils::getMilliseconds();
+        $timestamp = intval(Utils::getMilliseconds());
         $signature = Signature::calculateSignature($consumerId, $privateKey, $requestUrl, $requestMethod, $timestamp);
 
         /*
