@@ -65,7 +65,7 @@
         ],
         'GetFeedItem' => [
             'httpMethod' => 'GET',
-            'uri' => '/{ApiVersion}/feeds/feeditems/{feedId}?{nextCursor}',
+            'uri' => '/{ApiVersion}/feeds/feeditems/{feedId}?{+nextCursor}',
             'responseModel' => 'Result',
             'parameters' => [
                 'ApiVersion' => [
