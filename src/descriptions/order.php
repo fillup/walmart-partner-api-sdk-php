@@ -33,7 +33,7 @@
         ],
         'PrivateList' => [
             'httpMethod' => 'GET',
-            'uri' => '/{ApiVersion}/orders{nextCursor}',
+            'uri' => '/{ApiVersion}/orders{+nextCursor}',
             'responseModel' => 'Result',
             'parameters' => [
                 'ApiVersion' => [
