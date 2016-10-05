@@ -35,13 +35,13 @@ class AuthSubscriber implements SubscriberInterface
          * Get Request URL, method, and timestamp to calculate signature
          */
         $requestUrl = $event->getRequest()->getUrl();
-        
+
         //decode url back to normal to nextCursor issue. automatic url encoding
         $requestUrl = rawurldecode($requestUrl);
         $event->getRequest()->setUrl($requestUrl);
-        
+
         $requestMethod = $event->getRequest()->getMethod();
-        $timestamp = intval(Utils::getMilliseconds());
+        $timestamp = Utils::getMilliseconds();
         $signature = Signature::calculateSignature($consumerId, $privateKey, $requestUrl, $requestMethod, $timestamp);
 
         /*
@@ -59,5 +59,5 @@ class AuthSubscriber implements SubscriberInterface
         $updatedHeaders = array_merge($currentHeaders, $headers);
         $event->getRequest()->setHeaders($updatedHeaders);
     }
-    
+
 }
