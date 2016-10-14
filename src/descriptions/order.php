@@ -4,7 +4,7 @@
     'operations' => [
         'PrivateListReleased' => [
             'httpMethod' => 'GET',
-            'uri' => '/{ApiVersion}/orders/released',
+            'uri' => '/{ApiVersion}/orders/released{+nextCursor}',
             'responseModel' => 'Result',
             'parameters' => [
                 'ApiVersion' => [
@@ -26,7 +26,7 @@
                 'nextCursor' => [
                     'required' => false,
                     'type' => 'string',
-                    'location' => 'query',
+                    'location' => 'uri',
                 ],
 
             ]
