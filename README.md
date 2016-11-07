@@ -7,19 +7,11 @@ This library provides an easy to use interface to [Walmart's Partner APIs](https
 ## Installation
 It is easiest to use [Composer](https://getcomposer.org/) to install, simply run:
 
-    composer require fillup/walmart-partner-api-sdk-php:^1.0.6
-    composer require guzzlehttp/guzzle-services:dev-master
+    composer require fillup/walmart-partner-api-sdk-php:^1.0.9
 
 Or add to the ```require``` section of your ```composer.json``` file:
 
-    "fillup/walmart-partner-api-sdk-php": "^1.0.6",
-    "guzzlehttp/guzzle-services": "dev-master"
-
-Note about `guzzle-services`: There are fixes in the `master` branch that have not
-been tagged for release but are needed for this library to function. Specifically
-there is a fix to the XMLPosition parser that parses the API responses. If you
-do not explicitly require `guzzlehttp/guzzle-services:dev-master` composer will
-probably give you stability errors. 
+    "fillup/walmart-partner-api-sdk-php": "^1.0.9"
 
 ## Usage Documentation
  See [docs/README.md](docs/README.md)

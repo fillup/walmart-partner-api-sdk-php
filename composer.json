@@ -13,7 +13,7 @@
   "require": {
     "php": ">=5.4",
     "guzzlehttp/guzzle": "^5.3.1",
-    "guzzlehttp/guzzle-services": "dev-master",
+    "fillup/guzzle-services": "0.5.1",
     "guzzlehttp/retry-subscriber": "^2.0.2",
     "fillup/walmart-auth-signature-php": "^1.0.3",
     "fillup/array2xml": "^0.5.1"
