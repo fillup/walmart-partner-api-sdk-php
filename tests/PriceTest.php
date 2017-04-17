@@ -35,26 +35,6 @@ class PriceTest extends \PHPUnit_Framework_TestCase
         parent::__construct();
     }
 
-    public function testUpdate()
-    {
-        $client = $this->getClient();
-        try {
-            $update = $client->update([
-                'sku' => '1131270',
-                'currency' => 'USD',
-                'price' => '55',
-            ]);
-            $this->assertEquals(200, $update['statusCode']);
-            $this->assertEquals('WALMART_US', $update['mart']);
-            $this->debug($update);
-        } catch (CommandClientException $e) {
-            $error = $e->getResponse()->getHeader('X-Error');
-            $this->fail($e->getMessage() . 'Error: ' . $error);
-        } catch (\Exception $e) {
-            $this->fail($e->getMessage());
-        }
-    }
-
     public function testBulk()
     {
         $client = $this->getClient();
