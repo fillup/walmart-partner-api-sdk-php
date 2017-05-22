@@ -1,6 +1,6 @@
 <?php
 return [
-    'PUT /v2/prices?sku=1131270&currency=USD&price=55' => [
+    'PUT /v3/prices?sku=1131270&currency=USD&price=55' => [
         'status' => 200,
         'headers' => [],
         'body' => '<?xml version="1.0" encoding="UTF-8"?>

@@ -146,7 +146,7 @@ return [
 </ns2:FeedAcknowledgement>'
     ],
 
-    'POST /v2/feeds?feedType=price' => [
+    'POST /v3/feeds?feedType=price' => [
         'status' => 200,
         'headers' => [],
         'body' => '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
