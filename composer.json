@@ -12,9 +12,8 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.4",
-    "guzzlehttp/guzzle": "^5.3.1",
-    "fillup/guzzle-services": "0.5.1",
-    "guzzlehttp/retry-subscriber": "^2.0.2",
+    "guzzlehttp/guzzle": "^6.0",
+    "guzzlehttp/guzzle-services": "^1.1.2",
     "fillup/walmart-auth-signature-php": "^1.0.3",
     "fillup/array2xml": "^0.5.1"
   },
