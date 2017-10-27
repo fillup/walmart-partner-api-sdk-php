@@ -1,5 +1,5 @@
 {
-  "name": "fillup/walmart-partner-api-sdk-php",
+  "name": "SalesWarp/walmart-partner-api-sdk-php",
   "description": "PHP client for Walmart Partner APIs",
   "type": "library",
   "license": "MIT",

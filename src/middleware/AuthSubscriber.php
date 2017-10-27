@@ -57,6 +57,7 @@ class AuthSubscriber implements SubscriberInterface
         $currentHeaders = $event->getRequest()->getHeaders();
         unset($currentHeaders['Authorization']);
         $updatedHeaders = array_merge($currentHeaders, $headers);
+        unset($updatedHeaders['Host']);
         $event->getRequest()->setHeaders($updatedHeaders);
     }
 
