@@ -66,21 +66,21 @@ $price = $client->bulk([
             ],
             [
                 'itemIdentifier' => [
-                    'sku' => '1131270'
+                    'sku' => '1131271'
                 ],
                 'pricingList' => [
                     'pricing' => [
                         'currentPrice' => [
                             'value' => [
                                 'currency' => 'USD',
-                                'amount' => '4.00',
+                                'amount' => '3.00',
                             ],
                         ],
                         'currentPriceType' => 'BASE',
                         'comparisonPrice' => [
                             'value' => [
                                 'currency' => 'USD',
-                                'amount' => '5.99',
+                                'amount' => '4.99',
                             ],
                         ],
                         'priceDisplayCode' => [
